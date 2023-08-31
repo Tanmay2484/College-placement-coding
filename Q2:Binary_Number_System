@@ -1,0 +1,50 @@
+Problem Description :
+The Binary number system only uses two digits, 0 and 1 and number system can be called binary string. You are required to implement the following function:
+
+int OperationsBinaryString(char* str);
+
+The function accepts a string str as its argument. The string str consists of binary digits eparated with an alphabet as follows:
+
+– A denotes AND operation
+– B denotes OR operation
+– C denotes XOR Operation
+You are required to calculate the result of the string str, scanning the string to right taking one opearation at a time, and return the same.
+
+Note:
+
+No order of priorities of operations is required
+Length of str is odd
+If str is NULL or None (in case of Python), return -1
+Input:
+Sample Input:
+str: 1C0C1C1A0B1   output=1
+str:0C1A1B1C1C1B0A0  Output:0
+
+#include<bits/stdc++.h>
+using namespace std;
+int binary_num_system(string &s) 
+{
+  int string_len=s.size(),result=s[0]-'0';
+  if(string_len==0) return -1;
+ for(int pointer=1;pointer<string_len-1;pointer++){
+     
+     if(s[pointer]=='A'){      
+         result &=(s[pointer+1]-'0');
+     }
+     else if(s[pointer]=='B'){
+         result |=(s[pointer+1]-'0');
+     }
+     else if(s[pointer]=='C'){
+          result ^=(s[pointer+1]-'0');
+     }
+ }
+ return result;
+  
+}
+int main ()
+{
+  string s;
+  getline(cin,s);
+  cout<<binary_num_system(s);
+  return 0;
+}
