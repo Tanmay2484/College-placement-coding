@@ -1,3 +1,3 @@
 # College-placement-coding
 
-Hello Guys my name is Tanmay Dutta I am making and also sloving a list of oncampus coding dsa questions here i am using c++ language lets nailed the oncampus and offcampus placement guys :)   
+Hello Guys my name is Tanmay Dutta I am making and also solving a list of on-campus dsa coding questions here I am using C++ language lets nailed the on-campus and off-campus placement guys :)   
