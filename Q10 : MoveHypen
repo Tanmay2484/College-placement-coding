@@ -20,18 +20,21 @@ Sample Input
 
 Str: String-Compare
 Sample Output-
-
 -StringCompare
+//Code
 #include <iostream>
 using namespace std;
 string hypenString(string s){
-  string ans;
-  ans.push_back('-');
+  string ans;int count=0;
   int n=s.size();
   for(int i=0;i<n;i++){
       if(s[i]!='-'){
           ans+=s[i];
       }
+      else if(s[i]='-') count++;
+  }
+  while(count--){
+      ans='-'+ans;
   }
   return ans; 
 }
@@ -40,3 +43,24 @@ int main() {
    getline(cin,s);
    cout<<hypenString(s);
 }
+ //another way without space complexity
+#include <iostream>
+using namespace std;
+string hypenString(string &s){
+  int n=s.size(),count=0;
+  for(int i=0;i<n;i++){
+     if(s[i]=='-') {count++;
+      s.erase(i,1);
+      }
+  }
+  while(count--){
+      s='-'+s;
+  }
+  return s; 
+}
+int main() {
+   string s;
+   getline(cin,s);
+   cout<<hypenString(s);
+}
+
