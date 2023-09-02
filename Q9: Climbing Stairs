@@ -1,0 +1,15 @@
+Questions : ther will be given n as the count of the stairs and m is the steps will climb at once so return how many stpes need to go at the top return -1 if n==0 and m==0
+
+#include <iostream>
+using namespace std;
+int climbingStairs(int n,int m){
+    if(n==0 ||m==0) return -1;
+    if(n%m==0) return  n;
+    
+    return (n/m+n%m);
+}
+int main() {
+   int n,m;
+   cin>>n>>m;
+   cout<<climbingStairs(n,m);
+}
