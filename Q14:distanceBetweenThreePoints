@@ -1,0 +1,12 @@
+The program is supposed to calculate the sum of  distance between three points from each other.
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int a,b,c,d,e,f;
+    cin>>a>>b>>c>>d>>e>>f;
+    int pow1=pow(abs(a-b),2);
+    int pow2=pow(abs(c-d),2);
+    int pow3=pow(abs(e-f),2);
+    int sum=pow1+pow2+pow3;
+    cout<<sqrt(sum);
+}
