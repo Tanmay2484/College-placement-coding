@@ -42,3 +42,25 @@ int main() {
    ReplaceCharacter(s,ch1,ch2);
    cout<<s;
 }
+int main ()
+{
+    int i, n, reverse, d, f, l;
+    printf ("enter the starting \n");
+    scanf ("%d", &f);
+    printf ("enter the ending\n");
+    scanf ("%d", &l);
+    for (i = f; i <= l; i++)
+    {
+        reverse = 0;
+        n = i;
+        while (n != 0)
+	{
+	        d = n % 10;
+	        reverse = reverse * 10 + d;
+	        n = n / 10;
+	}
+        if (i == reverse)
+	        printf ("%d ", i);
+    }
+    return 0;
+}
