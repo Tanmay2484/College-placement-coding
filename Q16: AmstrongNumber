@@ -1,0 +1,20 @@
+Question: Find is it a amstrong number ? 
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n;
+    cin>>n;
+    int sum=0,m=n;
+    while(n!=0){
+        int rem=n%10;
+        int pow1=pow(rem,3);
+        sum+=pow1;
+        n/=10;
+    }
+    if(m==sum){
+        cout<<"yes";
+    }
+    else{
+        cout<<"no";
+    }
+}
