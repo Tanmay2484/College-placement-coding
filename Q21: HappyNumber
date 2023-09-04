@@ -1,0 +1,37 @@
+Question: happpy number 
+link: https://practice.geeksforgeeks.org/problems/happy-number1408/1
+#include<bits/stdc++.h>
+using namespace std;
+int squaredigits(int n){
+    int sum=0;
+    while(n!=0){
+        int rem=n%10;
+        sum+=(rem*rem);
+        n/=10;
+    }
+    return sum;
+}
+int happynumber(int n){
+    set<int>s;
+    s.insert(n);
+    //breaking the number in digits and square them and adding them
+    while(1){
+        if(n==1) return true;
+        n=squaredigits(n);
+        if(s.find(n)!=s.end()){
+            return false;
+        }
+        s.insert(n);
+    }
+}
+
+int main() {
+    int n;
+    cin>>n;
+    if(happynumber(n)){
+        cout<<"Yes";
+    }
+    else{
+        cout<<"No";
+    }
+}
