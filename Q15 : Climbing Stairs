@@ -1,0 +1,15 @@
+question link : https://leetcode.com/problems/climbing-stairs/description/
+
+class Solution {
+public:
+   vector<int>arr;
+   int solve(int n){
+        if(n<=2) return n;
+        if(arr[n]!=-1) return arr[n];
+        return arr[n]=solve(n-1)+solve(n-2);
+   }
+    int climbStairs(int n) {
+         arr=vector<int>(1000,-1);
+         return solve(n);
+    }
+};
