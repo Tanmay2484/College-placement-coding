@@ -18,3 +18,23 @@ int main() {
         cout<<"no";
     }
 }
+best ans of o(n);
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n;
+    cin>>n;
+    int sum=0,m=n;
+    while(n!=0){
+        int rem=n%10;
+        sum+=(rem*rem*rem);
+        n/=10;
+    }
+    if(m==sum){
+        cout<<"yes";
+    }
+    else{
+        cout<<"no";
+    }
+}
+
