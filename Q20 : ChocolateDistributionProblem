@@ -1,0 +1,23 @@
+Question: Chocolate Distribution Problem
+link: https://practice.geeksforgeeks.org/problems/chocolate-distribution-problem3825/1
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    int n,m,diff=INT_MAX;
+    cin>>n>>m;
+    vector<int>arr;
+    for(int i=0;i<n;i++){
+        int temp;
+        cin>>temp;
+        arr.push_back(temp);
+    }
+    sort(arr.begin(),arr.end());
+    for(int i=0;i<n-m;i++){
+        if(arr[i+m-1]-arr[i]<diff){
+            diff=arr[i+m-1]-arr[i];
+        }
+    }
+    cout<<diff;
+}
