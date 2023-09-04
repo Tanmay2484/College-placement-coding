@@ -1,0 +1,9 @@
+Question: you are given an integer number n determine the number of levels you have to print the number of total bricks  to make the house 
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+   int n;
+   cin>>n;
+   int ans=(n*(3*n+1))/2;
+   cout<<ans;
+}
